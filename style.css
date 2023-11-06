@@ -1,0 +1,618 @@
+.parent-container, .mySidebar {
+ 
+  padding: 0% 25px;
+}
+.grid
+{
+position: center;
+margin: 0px;
+margin-top: 0px;
+  
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 04px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 500px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+#mySidebar {
+  display: inline;
+}
+
+
+.abtme{
+  padding: 100px;
+  border: 100px;
+  position: center;
+}
+.container {
+  border: #333;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(49, 40, 58);
+    /* margin: 300; */
+    padding-bottom: 250%;
+    /* margin-left: 120px;
+    margin-right 120px;
+    margin-bottom: 12px */
+}
+
+
+/* //snack */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+    border-radius: 50px;
+    font-family: Montserrat;
+    
+  text-transform: lowercase;
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+
+
+@media only screen and (max-width: 600px) {#main {margin-left: 0}
+
+}
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+
+
+/*  ummmmmmm */
+
+
+
+
+.sidebar {
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #333;
+  color: #9A83B4;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #f1f1f1;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+
+/* fsf */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+
+/*  */
+
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+	text-shadow: none;
+}
+
+::selection {
+	text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+	vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+	resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Basic layout
+   ========================================================================== */
+
+.site-header {
+	min-width: 280px;
+	max-width: 826px;
+	margin: 0 auto;
+}
+
+.site-header {
+	padding: 0 0 42px;
+}
+
+.site-header .tagline {
+	margin: 0;
+}
+
+.sparator {
+	width: 100%;
+}
+
+.site-header, .about-me, .from-my-blog {
+	width: 75%;
+}
+
+@media all and (min-width:601px) and (max-width:1020px) {
+	.site-header, .about-me, .from-my-blog {
+		width: 82%;
+	}
+}
+
+.works, .works-hex, nav, .blog-excerpts-wrapper {
+	background-color: #ddd;
+}
+
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+nav {
+	height: 78px;
+	padding-bottom: 5px;
+}
+
+.top-ribbon {
+	height: 5px;
+}
+
+nav ul {
+	width: 75%;
+	min-width: 280px;
+	max-width: 826px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+nav li {
+	float: right;
+	display: inline-block;
+	padding: 15px 10px 2px;
+	margin: 0 6px;
+	-webkit-border-radius: 0 0 7px 7px;
+	-moz-border-radius: 0 0 7px 7px;
+	border-radius: 0 0 7px 7px;
+	cursor: pointer;
+}
+
+.win nav li {
+	padding: 12px 10px 5px;
+}
+
+nav li:hover {
+	background-color: rgb(192, 23, 104);
+	text-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
+
+
+/* ==========================================================================
+   Hexagon shape defaults
+   ========================================================================== */
+
+.hexagon {
+	display: inline-block;
+	overflow: hidden;
+	visibility: hidden;
+	-webkit-transform: rotate(120deg);
+	   -moz-transform: rotate(120deg);
+			transform: rotate(120deg);
+}
+
+.hexagon-in1, .hexagon-in2 {
+	overflow: hidden;
+	display: block;
+	width: 100%;
+	height: 100%;
+	-webkit-transform: rotate(-60deg);
+	   -moz-transform: rotate(-60deg);
+			transform: rotate(-60deg);
+}
+
+.hexagon-in2 {
+	overflow: hidden;
+	visibility: visible;
+	background-color: rgba(46, 46, 46, 1);
+}
+
+
+/* ==========================================================================
+   Works & Gallery effects
+   ========================================================================== */
+
+@media all and (min-width:1031px) {
+
+	.thumbnail {
+		-webkit-transition: all 0.2s ease-out;
+		   -moz-transition: all 0.2s ease-out;
+				transition: all 0.2s ease-out;
+	}
+
+	.thumbnail:hover {
+		-webkit-transition: all 0.2s ease-out;
+		   -moz-transition: all 0.2s ease-out;
+				transition: all 0.2s ease-out;
+	}
+
+	.works-hex .thumbnail:hover, .gallery-hex .thumbnail:hover {
+		width: 110%;
+		margin: 0 0 0 -5%;
+	}
+
+	.works .thumbnail, .gallery .thumbnail {
+		-webkit-filter: grayscale(1) sepia(0.03);
+	}
+
+	.works .thumbnail:hover , .gallery .thumbnail:hover {
+		-webkit-filter: grayscale(0) sepia(0);
+	}
+}
+
+
+/* ==========================================================================
+   Works
+   ========================================================================== */
+
+.thumbnail {
+	width: 100%;
+}
+
+.works, .works-hex {
+	text-align: center;
+	overflow: hidden;
+} 
+
+.category {
+	border: none;
+	display: inline-block;
+	padding-bottom: 2%;
+}
+
+.category:hover {
+	border: none;
+}
+
+.works .category {
+	width: 23%;
+	min-width: 90px;
+	max-width: 256px;
+	margin: 0 12px;
+}
+
+.four.works .category {
+	width: 17%;
+	min-width: 72px;
+	max-width: 186px;
+	margin: 0 11px;
+}
+
+.works-hex .category {
+	width: 25%;
+	min-width: 100px;
+	max-width: 270px;
+	margin: 0 1px;
+}
+
+@media all and (max-width:480px) {
+
+	.works-hex .category {
+		margin: 0;
+	}
+}
+
+@media all and (min-width:481px) and (max-width:1020px){
+
+	.works .category {
+		margin: 0 1.5% 0;
+		width: 25%;
+	}
+
+	.four.works .category {
+		margin: 0 1.5% 0;
+		width: 18%;
+	}
+}
+
+@media all and (max-width:480px) {
+
+	.works .category {
+		margin: 3% 1.5% 0;
+		width: 25%;
+	}
+
+	.four.works .category {
+		margin: 3% 0.5% 0;
+		width: 21%;
+	}
+}
+
+.works .thumbnail, .gallery .thumbnail {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.wrapper {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+
+.works .wrapper {
+	margin: 10% 0 17% 0;
+}
+
+.works-hex .wrapper {
+	margin: 17% 0;
+}
+
+/* .works-hex .wrapper:after {
+	padding-top: 116%; /*ratio
+	display: block;
+	content: '';
+} */
+
+.works-hex .hexagon {
+	position: 100%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.category-name {
+	display: inline-block;
+	margin-top: -9%;
+}
+
+.win .category-name {
+	margin-top: -12%;
+}
+
+/* 
+
+ITO ANG UHHHH FOOTER PO YESYES
+*********************************************************************/
